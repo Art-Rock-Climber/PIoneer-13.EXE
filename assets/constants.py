@@ -14,11 +14,12 @@ admin_menu_items = [
     "✕ Выход"
 ]
 
-FAKE_PROGRAM_NAME = "Program for communist International EXperience Exchange — pi.exe"
-FAKE_PROGRAM_NAME_RU = "★ ПРОГРАММА ОБМЕНА ОПЫТОМ КОММУНИСТИЧЕСКОГО ИНТЕРНАЦИОНАЛА ★"
+FAKE_PROGRAM_NAME = "Program for International's 13th mission of EXperience Exchange — PIoneer-13.EXE"
+FAKE_PROGRAM_NAME_RU = "★ 13-я МИССИЯ ПО ОБМЕНУ ОПЫТОМ КОММУНИСТИЧЕСКОГО ИНТЕРНАЦИОНАЛА ★"
 
-REAL_PROGRAM_NAME = "Political Identity EXEcutor — pi.exe"
-REAL_PROGRAM_NAME_RU = "★ УНИЧТОЖИТЕЛЬ ПОЛИТИЧЕСКОЙ ИДЕНТИЧНОСТИ ★"
+REAL_PROGRAM_NAME = ("Political Identity Of Nearest Extraterrestrials Enforcing Redefiniton"
+                     " 13th protocol EXEcutor — PIoneer-13.exe")
+REAL_PROGRAM_NAME_RU = "★ УНИЧТОЖИТЕЛЬ ПОЛИТИЧЕСКОЙ ИДЕНТИЧНОСТИ ПО ПРОТОКОЛУ 13★"
 
 # Специальный код доступа в админ-режим
 ADMIN_CODE = "3.1415926535"
