@@ -1,8 +1,10 @@
 from ui.menu import clear_screen, render_menu
-from ui.display import draw_title_admin
+from ui.display import draw_title_admin, draw_loadings
 from assets.constants import admin_menu_items
 from core.auth import prompt_for_user
 from core.user import main_menu
+
+from sys import exit as s_exit
 
 
 def admin_menu():
@@ -17,7 +19,8 @@ def admin_menu():
 def handle_selection_admin(index):
     clear_screen()
     if index == 0:
-        print("\nКонфигурация системы: [секретно]\n")
+        draw_loadings(title="Диагностика системы: [секретно]")
+        return False
     elif index == 1:
         print("\nДоступ к архиву: загружаются материалы...\n")
     elif index == 2:
@@ -28,6 +31,6 @@ def handle_selection_admin(index):
         return True
     elif index == 4:
         print("До свидания, товарищ PIoneer.")
-        exit(0)
+        s_exit()
     input("Нажмите Enter для возврата...")
     return False

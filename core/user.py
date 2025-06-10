@@ -4,6 +4,8 @@ from assets.constants import menu_items
 from core.auth import prompt_for_user, get_username
 from core.poems import poem_menu, load_poems, get_poems
 
+from sys import exit as s_exit
+
 
 def main_menu():
     choice = 0
@@ -30,7 +32,7 @@ def handle_selection_user(index):
         return
     elif index == 4:
         print(f"До свидания, товарищ {get_username()}.")
-        exit(0)
+        s_exit()
     input("\nНажмите Enter для возврата в меню...")
 
 

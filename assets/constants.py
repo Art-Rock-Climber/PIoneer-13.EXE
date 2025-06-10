@@ -7,7 +7,7 @@ menu_items = [
 ]
 
 admin_menu_items = [
-    "🛠 Просмотр конфигурации",
+    "🛠 Диагностика системы",
     "📂 Доступ к архиву материалов",
     "⚙ Редактировать параметры",
     "⇄ Сменить пользователя",
@@ -17,7 +17,7 @@ admin_menu_items = [
 FAKE_PROGRAM_NAME = "Program for International's 13th mission of EXperience Exchange — PIoneer-13.EXE"
 FAKE_PROGRAM_NAME_RU = "★ 13-я МИССИЯ ПО ОБМЕНУ ОПЫТОМ КОММУНИСТИЧЕСКОГО ИНТЕРНАЦИОНАЛА ★"
 
-REAL_PROGRAM_NAME = ("Political Identity Of Nearest Extraterrestrials Enforcing Redefiniton"
+REAL_PROGRAM_NAME = ("Political Identity Of Nearest Extraterrestrials Enforcing Redefinition"
                      " 13th protocol EXEcutor — PIoneer-13.exe")
 REAL_PROGRAM_NAME_RU = "★ УНИЧТОЖИТЕЛЬ ПОЛИТИЧЕСКОЙ ИДЕНТИЧНОСТИ ПО ПРОТОКОЛУ 13★"
 
