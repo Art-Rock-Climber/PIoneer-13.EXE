@@ -5,8 +5,10 @@ from core.auth import prompt_for_user, get_username
 
 
 def main_menu():
+    choice = 0
     while True:
-        choice = render_menu(draw_title_main, menu_items, get_username(), figlet_label="CCCP")
+        choice = render_menu(draw_title_main, menu_items,
+                             selected=choice, username=get_username(), figlet_label="CCCP")
         handle_selection_user(choice)
 
 
@@ -20,6 +22,7 @@ def handle_selection_user(index):
         print("📜 'Бей в барабаны, звени, медь труда...'")
     elif index == 3:
         prompt_for_user()
+        main_menu()
         return
     elif index == 4:
         print(f"До свидания, товарищ {get_username()}.")

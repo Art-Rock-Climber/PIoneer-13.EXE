@@ -10,8 +10,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def render_menu(title_func, menu_items, username=None, figlet_label=None):
-    selected = 0
+def render_menu(title_func, menu_items, selected=0, username=None, figlet_label=None):
     while True:
         clear_screen()
         title_func(username=username)

@@ -6,8 +6,10 @@ from core.user import main_menu
 
 
 def admin_menu():
+    choice = 0
     while True:
-        choice = render_menu(draw_title_admin, admin_menu_items, username="PIoneer", figlet_label=None)
+        choice = render_menu(draw_title_admin, admin_menu_items,
+                             selected=choice, username="PIoneer", figlet_label=None)
         if handle_selection_admin(choice):
             break
 
