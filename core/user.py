@@ -3,6 +3,7 @@ from ui.display import draw_title_main
 from assets.constants import menu_items
 from core.auth import prompt_for_user, get_username
 from core.poems import poem_menu, load_poems, get_poems
+from core.songs import song_menu, load_songs, get_songs
 
 from sys import exit as s_exit
 
@@ -20,7 +21,10 @@ def handle_selection_user(index):
     if index == 0:
         print("Вы открыли раздел об основах марксизма...")
     elif index == 1:
-        print("🎶 'Взвейтесь кострами, синие ночи...' 🎶")
+        if len(get_songs()) == 0:
+            load_songs()
+        song_menu()
+        return
     elif index == 2:  # стихи
         if len(get_poems()) == 0:
             load_poems()

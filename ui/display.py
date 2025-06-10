@@ -62,15 +62,19 @@ def draw_keyboard(figlet_font="smkeyboard"):
         print(Fore.WHITE + fig.renderText(row), end="")
 
 
-def draw_poems():
+def draw_poems_title():
     print(POEMS_TITLE)
 
 
-def draw_title_poem(title, poem_text):
+def draw_poem(title, poem_text):
     #clear_screen()
     print(Fore.LIGHTRED_EX + Style.BRIGHT + f"\n  {title}\n")
     print(Fore.WHITE + poem_text)
     print(Style.RESET_ALL)
+
+
+def draw_songs_title():
+    print("Советские песни:")
 
 
 def simulate_progress(progress, task_id, total):

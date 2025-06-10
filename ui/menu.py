@@ -33,7 +33,7 @@ def render_menu(title_func, menu_items, selected=0, username=None, figlet_label=
             return selected
 
 
-def render_poems_menu(title_func, menu_items, selected=0, username=None, figlet_label=None):
+def render_submenu(title_func, menu_items, selected=0, username=None, figlet_label=None):
     while True:
         clear_screen()
         title_func()

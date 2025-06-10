@@ -1,6 +1,6 @@
 import glob
-from ui.display import draw_poems, draw_title_poem
-from ui.menu import render_poems_menu, clear_screen
+from ui.display import draw_poems_title, draw_poem
+from ui.menu import render_submenu, clear_screen
 
 _poems = {}
 
@@ -15,7 +15,7 @@ def load_poems():
 def poem_menu():
     choice = 0
     while True:
-        choice = render_poems_menu(draw_poems, poem_items(), selected=choice)
+        choice = render_submenu(draw_poems_title, poem_items(), selected=choice)
         if choice == len(_poems):
             break
         handle_selection_poem(choice)
@@ -25,7 +25,7 @@ def handle_selection_poem(index):
     clear_screen()
     if index < len(_poems):
         title = list(_poems.keys())[index]
-        draw_title_poem(title, _poems[title])
+        draw_poem(title, _poems[title])
     input("\nНажмите Enter для возврата в меню...")
 
 
