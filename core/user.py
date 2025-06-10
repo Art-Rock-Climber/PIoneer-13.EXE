@@ -2,6 +2,7 @@ from ui.menu import clear_screen, render_menu
 from ui.display import draw_title_main
 from assets.constants import menu_items
 from core.auth import prompt_for_user, get_username
+from core.poems import poem_menu, load_poems, get_poems
 
 
 def main_menu():
@@ -18,8 +19,11 @@ def handle_selection_user(index):
         print("Вы открыли раздел об основах марксизма...")
     elif index == 1:
         print("🎶 'Взвейтесь кострами, синие ночи...' 🎶")
-    elif index == 2:
-        print("📜 'Бей в барабаны, звени, медь труда...'")
+    elif index == 2:  # стихи
+        if len(get_poems()) == 0:
+            load_poems()
+        poem_menu()
+        return
     elif index == 3:
         prompt_for_user()
         main_menu()

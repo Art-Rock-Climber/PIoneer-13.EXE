@@ -31,3 +31,21 @@ def render_menu(title_func, menu_items, selected=0, username=None, figlet_label=
             selected = (selected + 1) % len(menu_items)
         elif key == readchar.key.ENTER:
             return selected
+
+
+def render_poems_menu(title_func, menu_items, selected=0, username=None, figlet_label=None):
+    while True:
+        clear_screen()
+        title_func()
+        print(Fore.LIGHTBLACK_EX + "\n   Используйте ↑ и ↓ для навигации. Enter — выбор:\n")
+        for i, item in enumerate(menu_items):
+            prefix = decorator if i == selected else "   "
+            print(prefix + item + Style.RESET_ALL)
+
+        key = readchar.readkey()
+        if key == readchar.key.UP:
+            selected = (selected - 1) % len(menu_items)
+        elif key == readchar.key.DOWN:
+            selected = (selected + 1) % len(menu_items)
+        elif key == readchar.key.ENTER:
+            return selected

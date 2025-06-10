@@ -9,6 +9,7 @@ _username = None
 def prompt_for_user():
     global _username
     while True:
+        clear_screen()
         draw_title_main()
         draw_keyboard("smkeyboard")
         user_input = input(Fore.WHITE + "\nВведите ваше имя (или введите 3.1415926535): ").strip()
