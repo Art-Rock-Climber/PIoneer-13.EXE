@@ -1,6 +1,7 @@
 from colorama import Fore, Style
 from assets.constants import FAKE_PROGRAM_NAME, FAKE_PROGRAM_NAME_RU, REAL_PROGRAM_NAME, REAL_PROGRAM_NAME_RU, POEMS_TITLE
 from pyfiglet import Figlet
+#import shutil
 
 from rich.console import Console
 from rich.progress import (
@@ -134,3 +135,18 @@ def draw_loadings(title=None):
         while not exit_flag.is_set():
             layout["main"].update(Panel(progress.get_renderable(), border_style="dim"))
             t_sleep(0.1)
+
+
+# def center_text(text):
+#     width = shutil.get_terminal_size().columns
+#     return text.center(width)
+
+
+def draw_on_close1():
+    print()
+    print("Поздравляем, у вас есть возможность получить партийный билет!")
+
+
+def draw_on_close2():
+    print()
+    print(Fore.LIGHTRED_EX + Style.BRIGHT + "Вы точно уверены, что не примете партийный билет?")

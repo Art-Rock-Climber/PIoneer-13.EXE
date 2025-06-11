@@ -1,4 +1,4 @@
-import glob
+from glob import glob
 from ui.display import draw_poems_title, draw_poem
 from ui.menu import render_submenu, clear_screen
 
@@ -7,7 +7,7 @@ _poems = {}
 
 def load_poems():
     global _poems
-    for file in glob.glob("poems\\*.txt"):
+    for file in glob("poems\\*.txt"):
         with open(file, "r", encoding="utf-8") as f:
             _poems[file.split("\\")[-1].replace(".txt", "")] = f.read()
 
